@@ -96,7 +96,7 @@ function handleStatusUpdate(card, status) {
 
     const statusEl = card.querySelector('.statuss');
     if (statusEl) {
-        statusEl.innerHTML = `<p class="bg-${status === 'Interview' ? 'green' : 'red'}-500 text-white px-3 py-2 rounded text-sm font-medium">${status}</p>`;
+        statusEl.innerHTML = `<span class="bg-${status === 'Interview' ? 'green' : 'red'}-500 text-white px-3 py-2 rounded text-sm font-medium">${status}</span>`;
     }
 
     if (status === 'Interview') {
@@ -116,6 +116,7 @@ function handleStatusUpdate(card, status) {
         if (currentStatus === 'interview-filter-btn')
             renderInterviewList();
     }
+
     calculateCount();
 }
 
