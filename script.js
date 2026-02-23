@@ -135,7 +135,7 @@ function renderInterviewList() {
     }
     for (let interview of interviewList) {
         const div = document.createElement('div');
-        div.className = 'bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start mb-10';
+        div.className = 'text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start mb-5';
         div.innerHTML = `
             <div class="space-y-4">
                 <h2 class="company-name text-xl font-bold mb-2">${interview.companyName}</h2>
@@ -150,10 +150,10 @@ function renderInterviewList() {
                 <div class="statuss">
                     <span class="bg-green-500 text-white px-3 py-2 rounded text-sm font-medium">Interview</span>
                 </div>
-                <p class="notes text-gray-400 mt-2">${interview.notes}</p>
+                <p class="notes text-gray-500 mt-2">${interview.notes}</p>
                 <div class="mt-4 flex gap-3">
-                    <button class="interview-btn btn btn-success">Interview</button>
-                    <button class="rejected-btn btn btn-error">Rejected</button>
+                    <button class="interview-btn btn btn-success btn-outline">Interview</button>
+                    <button class="rejected-btn btn btn-error btn-outline">Rejected</button>
                 </div>
             </div>
             <div>
@@ -178,7 +178,7 @@ function renderRejectedList() {
     }
     for (let reject of rejectedList) {
         const div = document.createElement('div');
-        div.className = 'bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start mb-10';
+        div.className = 'text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start mb-5';
         div.innerHTML = `
             <div class="space-y-4">
                 <h2 class="company-name text-xl font-bold mb-2">${reject.companyName}</h2>
@@ -193,10 +193,10 @@ function renderRejectedList() {
                 <div class="statuss">
                     <span class="bg-red-500 text-white px-3 py-2 rounded text-sm font-medium">Rejected</span>
                 </div>
-                <p class="notes text-gray-400 mt-2">${reject.notes}</p>
+                <p class="notes text-gray-500 mt-2">${reject.notes}</p>
                 <div class="mt-4 flex gap-3">
-                    <button class="interview-btn btn btn-success">Interview</button>
-                    <button class="rejected-btn btn btn-error">Rejected</button>
+                    <button class="interview-btn btn btn-success btn-outline">Interview</button>
+                    <button class="rejected-btn btn btn-error btn-outline">Rejected</button>
                 </div>
             </div>
             <div>

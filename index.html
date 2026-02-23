@@ -13,20 +13,20 @@
 
 <body>
 
-    <header class="w-[80%] mx-auto">
-        <h1 class="text-2xl md:text-5xl lg:text-8xl font-bold text-blue-700 text-center">
+    <header class="w-[80%] mx-auto ">
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-blue-700 text-center mt-10">
             Job Application Tracker
         </h1>
         <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 p-5  lg:gap-10 lg:p-10  border-b-2">
-            <div class="bg-black text-center py-5 rounded-2xl text-white">
-                <p class="text-gray-200 font-semibold">TOTAl</p>
+            <div class="text-black shadow-lg text-center py-5 rounded-2xl  border border-gray-500">
+                <p class="text-black font-semibold">TOTAl</p>
                 <p id="TotalCount">0</p>
             </div>
-            <div class="bg-black text-center py-5 rounded-2xl text-white font-semibold">
+            <div class="text-black text-center shadow-lg py-5 rounded-2xl font-semibold border border-gray-500">
                 <p>INTERVIEW</p>
                 <p id="interviewCount" class="text-green-500">0</p>
             </div>
-            <div class="bg-black text-center py-5 rounded-2xl text-white font-semibold">
+            <div class="text-black text-center shadow-lg py-5 rounded-2xl font-semibold border border-gray-500">
                 <p>REJECTED</p>
                 <p id="rejectedCount" class="text-red-500">0</p>
             </div>
@@ -34,8 +34,8 @@
     </header>
     <!-- top button -->
     <main class="w-[80%] mx-auto">
-        <div class="flex justify-between py-4 text-xl font-semibold text-black">
-            <p>Available Jobs</p>
+        <div class="flex justify-between py-4 ">
+            <p class="text-xl font-semibold text-black">Available Jobs</p>
             <div class="flex gap-2">
                 <p id="availableJobCount">0</p>
                 <p>Jobs</p>
@@ -54,9 +54,9 @@
         <section id="filter-section" class="hidden">
         </section>
 
-        <section id="allCards" class="space-y-6 pb-10">
+        <section id="allCards" class="space-y-6 pb-5">
             <!-- Card 1 -->
-            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+            <div class="text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start">
                 <div class="space-y-4">
                     <h2 class="company-name text-xl font-bold mb-2">TechNova Ltd.</h2>
                     <p class="position">Frontend Developer</p>
@@ -67,11 +67,11 @@
                             <p class="salary"> 40,000 BDT</p>
                         </div>
                     </div>
-                    <div class="statuss text-white"></div>
-                    <p class="notes text-gray-300 mt-2">Develop responsive UI using HTML, CSS and JavaScript.</p>
+                    <div class="statuss"></div>
+                    <p class="notes text-gray-500 mt-2">Develop responsive UI using HTML, CSS and JavaScript.</p>
                     <div class="mt-4 flex gap-3">
-                        <button class="interview-btn btn btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-success btn-outline btn-outline">Interview</button>
+                        <button class="rejected-btn btn btn-error btn-outline btn-outline">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -80,7 +80,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+            <div class="text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start">
                 <div class="space-y-4">
                     <h2 class="company-name text-xl font-bold mb-2">SoftEdge Solutions</h2>
                     <p class="position">Backend Developer</p>
@@ -91,11 +91,11 @@
                             <p class="salary"> 50,000 BDT</p>
                         </div>
                     </div>
-                    <div class="statuss text-white"></div>
-                    <p class="notes text-gray-300 mt-2">Develop scalable REST APIs using Node.js and Express.</p>
+                    <div class="statuss"></div>
+                    <p class="notes text-gray-500 mt-2">Develop scalable REST APIs using Node.js and Express.</p>
                     <div class="mt-4 flex gap-3">
-                        <button class="interview-btn btn btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-success btn-outline">Interview</button>
+                        <button class="rejected-btn btn btn-error btn-outline">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -104,7 +104,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+            <div class="text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start">
                 <div class="space-y-4">
                     <h2 class="company-name text-xl font-bold mb-2">DataCore Analytics</h2>
                     <p class="position">Data Analyst</p>
@@ -115,11 +115,11 @@
                             <p class="salary"> 35,000 BDT</p>
                         </div>
                     </div>
-                    <div class="statuss text-white"></div>
-                    <p class="notes text-gray-300 mt-2">Analyze datasets and generate business insights.</p>
+                    <div class="statuss"></div>
+                    <p class="notes text-gray-500 mt-2">Analyze datasets and generate business insights.</p>
                     <div class="mt-4 flex gap-3">
-                        <button class="interview-btn btn btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-success btn-outline">Interview</button>
+                        <button class="rejected-btn btn btn-error btn-outline">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -128,7 +128,7 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+            <div class="text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start">
                 <div class="space-y-4">
                     <h2 class="company-name text-xl font-bold mb-2">CyberLink Security</h2>
                     <p class="position">Cyber Security Officer</p>
@@ -139,11 +139,11 @@
                             <p class="salary"> 60,000 BDT</p>
                         </div>
                     </div>
-                    <div class="statuss text-white"></div>
-                    <p class="notes text-gray-300 mt-2">Monitor and secure company network infrastructure.</p>
+                    <div class="statuss"></div>
+                    <p class="notes text-gray-500 mt-2">Monitor and secure company network infrastructure.</p>
                     <div class="mt-4 flex gap-3">
-                        <button class="interview-btn btn btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-success btn-outline">Interview</button>
+                        <button class="rejected-btn btn btn-error btn-outline">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -152,7 +152,7 @@
             </div>
 
             <!-- Card 5 -->
-            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+            <div class="text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start">
                 <div class="space-y-4">
                     <h2 class="company-name text-xl font-bold mb-2">CodeCraft Studio</h2>
                     <p class="position">UI/UX Designer</p>
@@ -163,11 +163,11 @@
                             <p class="salary"> 30,000 BDT</p>
                         </div>
                     </div>
-                    <div class="statuss text-white"></div>
-                    <p class="notes text-gray-300 mt-2">Design modern and user-friendly interfaces.</p>
+                    <div class="statuss"></div>
+                    <p class="notes text-gray-500 mt-2">Design modern and user-friendly interfaces.</p>
                     <div class="mt-4 flex gap-3">
-                        <button class="interview-btn btn btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-success btn-outline">Interview</button>
+                        <button class="rejected-btn btn btn-error btn-outline">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -176,7 +176,7 @@
             </div>
 
             <!-- Card 6 -->
-            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+            <div class="text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start">
                 <div class="space-y-4">
                     <h2 class="company-name text-xl font-bold mb-2">NextGen IT</h2>
                     <p class="position">Software Engineer</p>
@@ -187,11 +187,11 @@
                             <p class="salary"> 55,000 BDT</p>
                         </div>
                     </div>
-                    <div class="statuss text-white"></div>
-                    <p class="notes text-gray-300 mt-2">Work on enterprise-level web applications.</p>
+                    <div class="statuss"></div>
+                    <p class="notes text-gray-500 mt-2">Work on enterprise-level web applications.</p>
                     <div class="mt-4 flex gap-3">
-                        <button class="interview-btn btn btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-success btn-outline">Interview</button>
+                        <button class="rejected-btn btn btn-error btn-outline">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -200,7 +200,7 @@
             </div>
 
             <!-- Card 7 -->
-            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+            <div class="text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start">
                 <div class="space-y-4">
                     <h2 class="company-name text-xl font-bold mb-2">CloudNet Systems</h2>
                     <p class="position">DevOps Engineer</p>
@@ -211,11 +211,11 @@
                             <p class="salary"> 65,000 BDT</p>
                         </div>
                     </div>
-                    <div class="statuss text-white"></div>
-                    <p class="notes text-gray-300 mt-2">Manage CI/CD pipelines and cloud deployments.</p>
+                    <div class="statuss"></div>
+                    <p class="notes text-gray-500 mt-2">Manage CI/CD pipelines and cloud deployments.</p>
                     <div class="mt-4 flex gap-3">
-                        <button class="interview-btn btn btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-success btn-outline">Interview</button>
+                        <button class="rejected-btn btn btn-error btn-outline">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -224,7 +224,7 @@
             </div>
 
             <!-- Card 8 -->
-            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+            <div class="text-black border border-gray-500 shadow rounded-xl p-6 flex justify-between items-start">
                 <div class="space-y-4">
                     <h2 class="company-name text-xl font-bold mb-2">AppWorld Technologies</h2>
                     <p class="position">Mobile App Developer</p>
@@ -235,11 +235,11 @@
                             <p class="salary"> 48,000 BDT</p>
                         </div>
                     </div>
-                    <div class="statuss text-white"></div>
-                    <p class="notes text-gray-300 mt-2">Develop Android and iOS applications.</p>
+                    <div class="statuss"></div>
+                    <p class="notes text-gray-500 mt-2">Develop Android and iOS applications.</p>
                     <div class="mt-4 flex gap-3">
-                        <button class="interview-btn btn btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-success btn-outline">Interview</button>
+                        <button class="rejected-btn btn btn-error btn-outline">Rejected</button>
                     </div>
                 </div>
                 <div>
