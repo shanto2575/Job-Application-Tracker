@@ -129,7 +129,7 @@ function renderInterviewList() {
         filterSection.innerHTML = `
             <div class="text-center py-20 text-gray-400 border border-gray-300 rounded-3xl shadow-lg">
                 <i class="fa-regular fa-file  text-6xl"></i>
-                <h3 class="text-2xl font-bold mb-2 text-gray-500">No Interviews Jobs 😭</h3>
+                <h3 class="text-2xl font-bold mb-2 text-gray-500">😭No Interviews Jobs 😭</h3>
                 <p class="text-lg">click Interview button then show interview job list</p>
             </div>
         `;
@@ -172,7 +172,7 @@ function renderRejectedList() {
         filterSection.innerHTML = `
             <div class="text-center py-20 text-gray-400 border border-gray-300 rounded-3xl shadow-lg">
                 <i class="fa-regular fa-file text-6xl"></i>
-                <h3 class="text-2xl font-bold mb-2 text-gray-500">No Rejected Jobs 😭</h3>
+                <h3 class="text-2xl font-bold mb-2 text-gray-500">😭No Rejected Jobs 😭</h3>
                 <p class="text-lg">click Rejected button then show Rejected job list</p>
             </div>
         `;
