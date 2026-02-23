@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="./logo/job.png">
+</head>
+
+<body>
+
+    <header class="w-[80%] mx-auto">
+        <h1 class="text-2xl md:text-5xl lg:text-8xl font-bold text-blue-700 text-center">
+            Job Application Tracker
+        </h1>
+        <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 p-5  lg:gap-10 lg:p-10  border-b-2">
+            <div class="bg-black text-center py-5 rounded-2xl text-white">
+                <p class="text-gray-500">TOTAl</p>
+                <p id="TotalCount">0</p>
+            </div>
+            <div class="bg-black text-center py-5 rounded-2xl text-white ">
+                <p>INTERVIEW</p>
+                <p id="interviewCount" class="text-green-500">0</p>
+            </div>
+            <div class="bg-black text-center py-5 rounded-2xl text-white">
+                <p>REJECTED</p>
+                <p id="rejectedCount" class="text-red-500">0</p>
+            </div>
+        </div>
+    </header>
+    <!-- top button -->
+    <main class="w-[80%] mx-auto">
+        <div class="flex justify-between py-4 text-xl font-semibold text-black">
+            <p>Available Job</p>
+            <div class="flex gap-2">
+                <p id="availableJobCount">0</p>
+                <p>Jobs</p>
+            </div>
+        </div>
+        <div class="py-5 space-x-5">
+            <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn"
+                class="btn btn-soft bg-black text-white">All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn"
+                class="btn btn-soft">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn"
+                class="btn btn-soft">Rejected</button>
+        </div>
+
+        <!-- filtering -->
+        <section id="filter-section" class="hidden">
+        </section>
+
+        <section id="allCards" class="space-y-6 pb-10">
+            <!-- Card 1 -->
+            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+                <div class="space-y-4">
+                    <h2 class="company-name text-xl font-bold mb-2">TechNova Ltd.</h2>
+                    <p class="position">Frontend Developer</p>
+                    <div class=" flex gap-7">
+                        <p class="location"> Dhaka</p>
+                        <div class="flex gap-7">
+                            <p class="type">Full-Time</p>
+                            <p class="salary"> 40,000 BDT</p>
+                        </div>
+                    </div>
+                    <div class="statuss text-white"></div>
+                    <p class="notes text-gray-300 mt-2">Develop responsive UI using HTML, CSS and JavaScript.</p>
+                    <div class="mt-4 flex gap-3">
+                        <button class="interview-btn btn btn-success">Interview</button>
+                        <button class="rejected-btn btn btn-error">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <i class="delete-btn fa-solid fa-trash text-red-500 text-xl cursor-pointer hover:text-red-700"></i>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+                <div class="space-y-4">
+                    <h2 class="company-name text-xl font-bold mb-2">SoftEdge Solutions</h2>
+                    <p class="position">Backend Developer</p>
+                    <div class=" flex gap-7">
+                        <p class="location"> Chattogram</p>
+                        <div class="flex gap-7">
+                            <p class="type">Full-Time</p>
+                            <p class="salary"> 50,000 BDT</p>
+                        </div>
+                    </div>
+                    <div class="statuss text-white"></div>
+                    <p class="notes text-gray-300 mt-2">Develop scalable REST APIs using Node.js and Express.</p>
+                    <div class="mt-4 flex gap-3">
+                        <button class="interview-btn btn btn-success">Interview</button>
+                        <button class="rejected-btn btn btn-error">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <i class="delete-btn fa-solid fa-trash text-red-500 text-xl cursor-pointer hover:text-red-700"></i>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+                <div class="space-y-4">
+                    <h2 class="company-name text-xl font-bold mb-2">DataCore Analytics</h2>
+                    <p class="position">Data Analyst</p>
+                    <div class=" flex gap-7">
+                        <p class="location"> Remote</p>
+                        <div class="flex gap-7">
+                            <p class="type">Part-Time</p>
+                            <p class="salary"> 35,000 BDT</p>
+                        </div>
+                    </div>
+                    <div class="statuss text-white"></div>
+                    <p class="notes text-gray-300 mt-2">Analyze datasets and generate business insights.</p>
+                    <div class="mt-4 flex gap-3">
+                        <button class="interview-btn btn btn-success">Interview</button>
+                        <button class="rejected-btn btn btn-error">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <i class="delete-btn fa-solid fa-trash text-red-500 text-xl cursor-pointer hover:text-red-700"></i>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+                <div class="space-y-4">
+                    <h2 class="company-name text-xl font-bold mb-2">CyberLink Security</h2>
+                    <p class="position">Cyber Security Officer</p>
+                    <div class=" flex gap-7">
+                        <p class="location"> Dhaka</p>
+                        <div class="flex gap-7">
+                            <p class="type">Full-Time</p>
+                            <p class="salary"> 60,000 BDT</p>
+                        </div>
+                    </div>
+                    <div class="statuss text-white"></div>
+                    <p class="notes text-gray-300 mt-2">Monitor and secure company network infrastructure.</p>
+                    <div class="mt-4 flex gap-3">
+                        <button class="interview-btn btn btn-success">Interview</button>
+                        <button class="rejected-btn btn btn-error">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <i class="delete-btn fa-solid fa-trash text-red-500 text-xl cursor-pointer hover:text-red-700"></i>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+                <div class="space-y-4">
+                    <h2 class="company-name text-xl font-bold mb-2">CodeCraft Studio</h2>
+                    <p class="position">UI/UX Designer</p>
+                    <div class=" flex gap-7">
+                        <p class="location"> Sylhet</p>
+                        <div class="flex gap-7">
+                            <p class="type">Part-Time</p>
+                            <p class="salary"> 30,000 BDT</p>
+                        </div>
+                    </div>
+                    <div class="statuss text-white"></div>
+                    <p class="notes text-gray-300 mt-2">Design modern and user-friendly interfaces.</p>
+                    <div class="mt-4 flex gap-3">
+                        <button class="interview-btn btn btn-success">Interview</button>
+                        <button class="rejected-btn btn btn-error">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <i class="delete-btn fa-solid fa-trash text-red-500 text-xl cursor-pointer hover:text-red-700"></i>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+                <div class="space-y-4">
+                    <h2 class="company-name text-xl font-bold mb-2">NextGen IT</h2>
+                    <p class="position">Software Engineer</p>
+                    <div class=" flex gap-7">
+                        <p class="location"> Khulna</p>
+                        <div class="flex gap-7">
+                            <p class="type">Full-Time</p>
+                            <p class="salary"> 55,000 BDT</p>
+                        </div>
+                    </div>
+                    <div class="statuss text-white"></div>
+                    <p class="notes text-gray-300 mt-2">Work on enterprise-level web applications.</p>
+                    <div class="mt-4 flex gap-3">
+                        <button class="interview-btn btn btn-success">Interview</button>
+                        <button class="rejected-btn btn btn-error">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <i class="delete-btn fa-solid fa-trash text-red-500 text-xl cursor-pointer hover:text-red-700"></i>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+                <div class="space-y-4">
+                    <h2 class="company-name text-xl font-bold mb-2">CloudNet Systems</h2>
+                    <p class="position">DevOps Engineer</p>
+                    <div class=" flex gap-7">
+                        <p class="location"> Remote</p>
+                        <div class="flex gap-7">
+                            <p class="type">Full-Time</p>
+                            <p class="salary"> 65,000 BDT</p>
+                        </div>
+                    </div>
+                    <div class="statuss text-white"></div>
+                    <p class="notes text-gray-300 mt-2">Manage CI/CD pipelines and cloud deployments.</p>
+                    <div class="mt-4 flex gap-3">
+                        <button class="interview-btn btn btn-success">Interview</button>
+                        <button class="rejected-btn btn btn-error">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <i class="delete-btn fa-solid fa-trash text-red-500 text-xl cursor-pointer hover:text-red-700"></i>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="bg-black/50 text-white shadow rounded-xl p-6 flex justify-between items-start">
+                <div class="space-y-4">
+                    <h2 class="company-name text-xl font-bold mb-2">AppWorld Technologies</h2>
+                    <p class="position">Mobile App Developer</p>
+                    <div class=" flex gap-7">
+                        <p class="location"> Dhaka</p>
+                        <div class="flex gap-7">
+                            <p class="type">Full-Time</p>
+                            <p class="salary"> 48,000 BDT</p>
+                        </div>
+                    </div>
+                    <div class="statuss text-white"></div>
+                    <p class="notes text-gray-300 mt-2">Develop Android and iOS applications.</p>
+                    <div class="mt-4 flex gap-3">
+                        <button class="interview-btn btn btn-success">Interview</button>
+                        <button class="rejected-btn btn btn-error">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <i class="delete-btn fa-solid fa-trash text-red-500 text-xl cursor-pointer hover:text-red-700"></i>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
