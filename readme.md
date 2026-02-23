@@ -5,25 +5,29 @@ getElementByClassName=>getElementByClassName return in a HTMLCollection and sele
 querySelector=>querySelector return in a single Element Value and selected Types in css Selector;
 querySelector=>querySelectorAll Return in a NodeList and selected type with css Selector;
 
+
+
 2. How do you create and insert a new element into the DOM?
 
-<!-- Create  Element=> -->
+Create  Element=> -->
 
 Use document.createElement() to create a new HTML element.
 example: const first = document.createElement("div");
 
-<!-- Add content=> -->
+Add content=> -->
 
 first create a element than add this element value is hello william use a textContent or innerText,innerHTML and add a classList ;
 Example:
 first.textContent = "Hello World!";
 first.classList.add("box");
 
-<!-- Insert the Element into the DOM=> -->
+Insert the Element into the DOM=> -->
 
 Now you i to attach it to an existing element to use appendChild;
 Example:
 document.body.appendChild(newDiv);
+
+
 
 3. What is Event Bubbling? And how does it work?
 
@@ -34,7 +38,8 @@ Example:
 <div id="parent">
   <button id="child">Click Me!</button>
 </div>
-<!-- javaScript -->
+
+ javaScript Code -->
     <script>
         document.getElementById("child").addEventListener("click", function () {
             console.log(" Child Button clicked");
@@ -44,6 +49,8 @@ Example:
             console.log("Parent div clicked");
         });
     </script>
+
+
 
 4. What is Event Delegation in JavaScript? Why is it useful?
 
@@ -55,10 +62,10 @@ Example:
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
 
-<!-- preventDefault() -->
+preventDefault() -->
 It stops the default browser behavior of an element.
 
-<!-- stopPropagation() -->
+stopPropagation() -->
 It stops the event from bubbling up to parent elements.
 It does NOT stop default behavior — it only stops event flow.
 
